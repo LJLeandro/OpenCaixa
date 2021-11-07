@@ -8,7 +8,15 @@ namespace OpenCaixa.Modelos
 {
     public class Categoria
     {
-        public int Codigo { get; set; }
-        public string Nome { get; set; }
+        public int Codigo { get; private set; }
+        public string Nome { get; private set; }
+
+        public List<Produto>? Produtos { get; set; }
+
+        public Categoria(int codigo, string nome)
+        {
+            Codigo = codigo;
+            Nome = nome;
+        }
     }
 }

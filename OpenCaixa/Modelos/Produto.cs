@@ -15,8 +15,9 @@ namespace OpenCaixa.Modelos
         public Categoria Categoria { get; set; }
 
 
-        public Produto(string nome, double preco, int estoque = 0, Categoria categoria)
+        public Produto(int codigo, string nome, double preco, Categoria categoria, int estoque = 0)
         {
+            Codigo = codigo;
             Nome = nome;
             Preco = preco;
             Estoque = estoque;
